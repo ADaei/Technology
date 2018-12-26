@@ -1,0 +1,10 @@
+<MMU Oriental>
+  Different process could not access memory used by other process.
+  ==> Process only use virtual memory instead of physical memory.
+  ==> MMU is a hardware to confirm the translation between virtual memory and physical memory is correct.
+
+<Paging>
+  Each process has its own page table.
+
+<Swap>
+  When RAM run-out but a process should be run, move a process from RAM to swap partition/file and free the RAM for use.
