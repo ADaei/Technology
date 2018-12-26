@@ -9,3 +9,15 @@
 <Swap>
   When RAM run-out but a process should be run, move a process from RAM to swap partition/file and free the RAM for use.
   If a process move back to RAM but its physical memory address change, re-mapping its virtual memory to physical memory to confirm that the process could access the same virtual memory address as before.
+
+<Fork>
+  A process have 4 part in memory:
+    .Program  (read only)
+    .Data     (read/write)
+    .Stack    (read/write)
+    .Constant (read only)
+  Fork create A child process use same program memory with parent process
+    .Child process will have its own stack memory when fork.
+    .Child process will have its own page mapping to a new physical memory when it first time want to write some data. (copy-on-write)
+      -NOT all data memory be copy to a new page/memory for minimizing the physical memory usage.
+  Child process end its lifetime when call exec/exit.
