@@ -8,3 +8,4 @@
 
 <Swap>
   When RAM run-out but a process should be run, move a process from RAM to swap partition/file and free the RAM for use.
+  If a process move back to RAM but its physical memory address change, re-mapping its virtual memory to physical memory to confirm that the process could access the same virtual memory address as before.
