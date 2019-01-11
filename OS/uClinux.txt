@@ -1,0 +1,29 @@
+1. uClinux difference with Linux
+  1.1 Use uclibc replace glibc (smaller)
+  1.2 No memory mangement (MMU), could not use virtual memory remaping to physical memory
+    1.2.1 Process could only use one memory block with continuous memory address (could not separate)
+    1.2.2 Process could access memory address used by other process (no virtual memory to protect address range)
+    1.2.3 Use Romfs
+  1.3 Use page_alloc2/kmalloc2 replace malloc
+  1.4 No brk/sbrk
+  1.5 Use vfork replace fork
+
+2. Romfs
+  2.1 read only file system
+  2.2 cannot "copy on write" (it is fork ability)
+  2.3 support XIP(Execute in place, need to use NOR Flash)
+    2.3.1 XIP : just move program pointer to RAM, but run on flash
+      2.3.1.1 XIP PROS: use less RAM, less action, less power
+      2.3.1.1 XIP COMS: lower process speed
+    2.3.2 No XIP : move whole program to RAM
+
+3. NOR vs. NAND
+  3.1 Read speed:       NOR      >    NAND
+  3.2 Write speed:      NOR     <<<   NAND
+  3.3 Erase speed:      NOR(5s) <<<   NAND (4ms)
+  3.4 Erase unit size:  NOR      >    NAND
+
+
+[Reference]
+http://wiki.csie.ncku.edu.tw/embedded/uclinux
+http://kelvin820.pixnet.net/blog/post/12793476-%5B%E8%BD%89%E8%B2%BC%5Dnand-%E8%88%87-nor-flash
