@@ -1,0 +1,20 @@
+-----------------------------------------------------------------
+<Clock> CPU Frequency
+
+-----------------------------------------------------------------
+<Low Clock> Lowest CPU Frequency (for power comsumption.)
+
+-----------------------------------------------------------------
+<Timer>
+8 bits timer could calculate to 255 * ( 1us/X(MHz) )
+16 bits timer could calculate to 65535 * ( 1us/X(MHz) )
+32 bits timer could calculate to 4294967295 * ( 1us/X(MHz) )
+
+For example of 16MHz MCU
+8 bits timer: 16 us wrap-around
+16 bits timer: 4.096 ms wrap-around
+32 bits timer: 262144 sec ( > 72 hour ) wrap-around
+-----------------------------------------------------------------
+<Operational Amplifier> 運算放大器
+<Pulse Width Modulation> PWM 脈衝寬度調變
+<Comparator> 比較器
