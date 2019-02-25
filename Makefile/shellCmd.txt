@@ -1,0 +1,11 @@
+<Usage>
+
+  /*** show dir/files in current dir ***/
+  FILES := $(shell ls)
+  all:
+        echo $(FILES)
+
+  /*** show path in current dir ***/
+  PATH := $(shell pwd)
+  all:
+        echo $(PATH)
