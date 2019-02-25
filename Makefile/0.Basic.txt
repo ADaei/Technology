@@ -1,0 +1,23 @@
+<example 1>
+target: targetFile1 targetFile2
+<tab>gcc -o createExecuteFile targetFile1 targetFile2
+
+##1. head line could not use space, but only tab
+##2. head tail could not use any sapce
+##3. comment use #
+##4. makefile combined with depedency and rule
+
+<example 2: dependency>
+myapp: main.o 2.o 3.o
+main.o: main.c a.h
+2.o: 2.c a.h b.h
+3.o: 3.c b.h c.h
+
+##1. <createFile>:<dependency file1> <dependency file2>
+
+<example 3: auto create dependency>
+gcc -MMD -MF program.o.d program.c
+
+
+
+Reference: https://hackmd.io/s/SySTMXPvl
