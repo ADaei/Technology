@@ -23,6 +23,6 @@ gcc -MMD -MF program.o.d program.c
 clean:
 <tab>action...
 
-#1. fake item is to prevent there is a file named "clean" and disturb its dependency.
+#1. fake item is to prevent that if there is a file named "clean" without any dependency, action "make clean" will be defined as creating the file "clean", but it had already exist, so clean action will not be process.
 
 Reference: https://hackmd.io/s/SySTMXPvl
