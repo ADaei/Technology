@@ -1,1 +1,7 @@
+<Usage>
 
+  change pattern
+
+  src=$(wildcard *.c)               //get all .c files under this dir
+  obj=$(patsubst %.c,%.o,$(src) )   //get all .o files belong to .c file (create *.c by *.c list)
+  obj=$(src:%.c=%.o)                //get all .o files belong to .c file (create *.c by *.c list)
