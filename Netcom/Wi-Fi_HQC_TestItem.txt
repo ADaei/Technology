@@ -1,0 +1,13 @@
+Gain Stage (Dec)
+Output Power (dBm)
+EVM (dB)
+Frequency Offser (ppm)
+Transmit spectrum mask
+Transmit spectrum flatness
+Carrier Leakage (dB)
+Packet Error Rate and RX Dynamic range (RSSI (-2 dBm~-100 dBm, step 1dB))
+Maximum Input Level (dBm) 
+Sensitivity (dB)
+RSSI Accuracy
+Power Comsumption
+Theremal
