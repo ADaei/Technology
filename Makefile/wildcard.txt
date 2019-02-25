@@ -4,9 +4,12 @@
   
   $(wildcard *.c)           //get .c list in current dir
   
+  SRC = $(wildcard *.c) $(wildcard inc/*.c)   //get all .c list in current dir and inc sub-dir
+  
   ifeq (PATTERN,$(wildcard PATTERN))  //check file exist before include it
   include PATTERN
   
-  objects := $(patsubst %.c,%.o,$(wildcard *.c))  //compile all c files and link them together to a excutable
+  /*** compile all c files and link them together to a excutable ***/
+  objects := $(patsubst %.c,%.o,$(wildcard *.c))
   foo : $(objects)
     cc -o foo $(objects)
