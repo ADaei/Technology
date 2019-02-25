@@ -1,1 +1,6 @@
+<Usage>
 
+  Remove path
+  
+  src=$(wildcard *.c ./sub/*.c)   //echo src will get *.c files with path
+  files=$(notdir $(src))          //echo dir will get *.c feils without path
