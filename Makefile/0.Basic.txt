@@ -1,3 +1,5 @@
+## Makefile combined with depedency and rule
+
 <example 1>
 target: targetFile1 targetFile2
 <tab>gcc -o createExecuteFile targetFile1 targetFile2
@@ -5,7 +7,8 @@ target: targetFile1 targetFile2
 ##1. head line could not use space, but only tab
 ##2. head tail could not use any sapce
 ##3. comment use #
-##4. makefile combined with depedency and rule
+##4. it could be change to one line as "target: targetFile1 targetFile2 gcc -o object targetFile1 targetFile2"
+
 
 <example 2: dependency>
 myapp: main.o 2.o 3.o
