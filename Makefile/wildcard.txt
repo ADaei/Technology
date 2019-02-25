@@ -1,0 +1,12 @@
+<Usage>
+  
+  $(wildcard PATTERN...)    //Find file with name "PATTERN" in current dir
+  
+  $(wildcard *.c)           //get .c list in current dir
+  
+  ifeq (PATTERN,$(wildcard PATTERN))  //check file exist before include it
+  include PATTERN
+  
+  objects := $(patsubst %.c,%.o,$(wildcard *.c))  //compile all c files and link them together to a excutable
+  foo : $(objects)
+    cc -o foo $(objects)
