@@ -18,6 +18,11 @@ main.o: main.c a.h
 <example 3: auto create dependency>
 gcc -MMD -MF program.o.d program.c
 
+<example 3: fake item>
+.PHONY: clean
+clean:
+<tab>action...
 
+#1. fake item is to prevent there is a file named "clean" and disturb its dependency.
 
 Reference: https://hackmd.io/s/SySTMXPvl
