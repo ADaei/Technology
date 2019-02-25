@@ -1,0 +1,16 @@
+<Usage>
+  
+  =         //assign value of final result in a makefile (overwrite)
+  :=        //assign value of current result in a makefile (overwrite)
+  ?=        //assign value if variable is empty
+  +=        //attach value in the tail with a space
+  
+  $a = 1
+  value =  $a
+  $a = 2
+  echo $value   // result will be 2
+  
+  $a = 1
+  value :=  $a
+  $a = 2
+  echo $value   // result will be 1
